@@ -1,0 +1,7 @@
+import type { Metadata } from "next";
+import { PageHero } from "../../components/PageHero";
+import { ServiceList } from "../../components/ServiceList";
+
+export const metadata: Metadata = { title: "Tjenester", description: "Montasje av stålbygg, tak, TRP, sandwichpaneler, vinduer, dører og beslag." };
+
+export default function ServicesPage() { return <><PageHero eyebrow="TJENESTER" title="Montasje av stålbygg" text="Skarvøy Montasje arbeider som spesialisert montasjepartner i profesjonelle byggeprosjekter." image="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1800&q=85" /><section className="shell prose-intro"><p className="section-label">FRA STÅL TIL FERDIG BYGG</p><div><h2>Elementene skal fungere sammen.</h2><p className="lead">Vi bidrar med montasje gjennom hele byggefasen – koordinert med øvrige fag og prosjektets fremdrift på plass.</p></div></section><section className="services-section services-page"><div className="shell"><ServiceList /></div></section><section className="shell process-section"><p className="eyebrow">SLIK BIDRAR VI</p><h2>En montasjepartner som forstår helheten.</h2><div className="process-grid"><p>Vi jobber med de enkelte bygningsdelene, men alltid med det ferdige bygget som mål. Derfor er god dialog, logistikk og tydelige grensesnitt viktig i hvert prosjekt.</p><p>Ta kontakt tidlig for en prat om omfang, kapasitet og hvordan montasjen kan rigges på deres prosjekt.</p></div></section></> }

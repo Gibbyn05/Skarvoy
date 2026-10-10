@@ -1,0 +1,7 @@
+import type { Metadata } from "next";
+import { ContactForm } from "../../components/ContactForm";
+import { PageHero } from "../../components/PageHero";
+import { hiringOpen, jobFocus } from "../../data/jobs";
+
+export const metadata: Metadata = { title: "Jobb hos oss", description: "Åpen søknad til Skarvøy Montasje." };
+export default function CareersPage() { return <><PageHero eyebrow="JOBB HOS OSS" title="Vil du jobbe med montasje av stålbygg?" text="Vi er alltid interessert i å høre fra dyktige folk med erfaring eller interesse for montasjefaget." image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1800&q=85" /><section className="shell career-grid"><div><p className="eyebrow">ARBEIDSHVERDAGEN</p><h2>Praktisk arbeid.<br />Reelle prosjekter.</h2></div><div><p className="lead">Arbeidet kan foregå på ulike byggeplasser i Norge, og omfatter blant annet:</p><ul className="check-list">{jobFocus.map((item) => <li key={item}>{item}</li>)}</ul></div></section><section className="dark-band application-section"><div className="shell application-grid"><div><p className="eyebrow">ÅPEN SØKNAD</p><h2>{hiringOpen ? "Vi søker folk." : "Ingen aktiv utlysning akkurat nå."}</h2><p>{hiringOpen ? "Se etter en konkret stillingstekst her." : "Du er likevel velkommen til å sende en åpen søknad. Vi tar kontakt dersom det blir aktuelt."}</p></div><ContactForm career /></div></section></> }
